@@ -1,10 +1,10 @@
 #==========================================================================
-# Description: Compile the fnnas kernel
+# Description: Build FnNAS Kernel
 # Copyright (C) 2025 https://fnnas.com
 # Copyright (C) 2026 https://github.com/ophub/fnnas
 #==========================================================================
 
-name: Compile the fnnas kernel
+name: Build FnNAS Kernel
 
 on:
   repository_dispatch:

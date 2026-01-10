@@ -1,9 +1,9 @@
 #=====================================================================================
 # https://github.com/ophub/fnnas
-# Description: Build fnnas
+# Description: Build FnNAS Image
 #=====================================================================================
 
-name: Build fnnas
+name: Build FnNAS Image
 
 on:
   repository_dispatch:
