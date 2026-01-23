@@ -223,6 +223,10 @@ on:
         required: false
         default: true
         type: boolean
+      rootfs_expand:
+        description: "Set rootfs expansion size(GiB)"
+        required: false
+        default: "16"
       fnnas_storage:
         description: "Set fnnas image releases tags"
         required: false
@@ -415,6 +419,7 @@ jobs:
           fnnas_kernel: ${{ inputs.fnnas_kernel }}
           auto_kernel: ${{ inputs.auto_kernel }}
           kernel_repo: ${{ inputs.kernel_repo }}
+          rootfs_expand: ${{ inputs.rootfs_expand }}
           builder_name: ${{ inputs.builder_name }}
 
       - name: Upload the packaged fnnas
