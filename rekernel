@@ -213,6 +213,13 @@ download_dtbs() {
         return
     fi
 
+    # Check if sufficient dtbs files already exist
+    dtbs_num="$(find "${fnnas_dtbs}" -type f -name "*.dtb" 2>/dev/null | wc -l)"
+    if [[ -n "${dtbs_num}" && "${dtbs_num}" -ge "456" ]]; then
+        echo -e "${NOTE} Sufficient kernel dtbs files already exist (${dtbs_num} files). Skipping download."
+        return
+    fi
+
     cd "${current_path}"
 
     # Get the latest version from github releases(e.g: 6.12.41)
